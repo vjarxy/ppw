@@ -3,27 +3,247 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Profil Mahasiswa | Elegant Portfolio</title>
-    <!-- Font modern dari Google -->
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
-    
-    <!-- BARIS INILAH YANG MENGHUBUNGKAN HTML DENGAN CSS -->
-    <link rel="stylesheet" href="style.css">
+    <title>PPW | Fajar Ali Hamzah</title>
+
+    <!-- Font Poppins -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: #f5f7fb;
+            color: #1e293b;
+            min-height: 100vh;
+        }
+
+        /* Layout utama */
+        .container {
+            display: flex;
+            min-height: 100vh;
+        }
+
+        /* Sidebar */
+        .sidebar {
+            width: 290px;
+            background: #ffffff;
+            padding: 40px 25px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            border-right: 1px solid #e8edf3;
+            box-shadow: 4px 0 20px rgba(0, 0, 0, 0.02);
+        }
+
+        /* Foto profil */
+        .profile-img {
+            width: 200px;
+            height: 50vh;
+            border-radius: 10%;
+            object-fit: cover;
+            border: 5px solid #f1f5f9;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+            margin-bottom: 25px;
+        }
+
+        .profile-name {
+            font-size: 20px;
+            font-weight: 600;
+            text-align: center;
+            color: #1e293b;
+            margin-bottom: 20px;
+        }
+
+        /* Informasi profil */
+        .profile-info {
+            width: 100%;
+            border-top: 1px solid #edf1f5;
+            padding-top: 20px;
+        }
+
+        .info-item {
+            margin-bottom: 18px;
+        }
+
+        .info-label {
+            font-size: 11px;
+            font-weight: 600;
+            color: #94a3b8;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 4px;
+        }
+
+        .info-value {
+            font-size: 13px;
+            color: #475569;
+            word-break: break-word;
+        }
+
+        /* Konten utama */
+        .main-content {
+            flex: 1;
+            padding: 70px 80px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .welcome-text {
+            font-size: 42px;
+            font-weight: 600;
+            color: #1e293b;
+            margin-bottom: 12px;
+            letter-spacing: -1px;
+        }
+
+        .welcome-text span {
+            color: #64748b;
+        }
+
+        .subtitle {
+            font-size: 15px;
+            color: #94a3b8;
+            margin-bottom: 45px;
+        }
+
+        /* Kartu tugas */
+        .task-card {
+            background: #ffffff;
+            border: 1px solid #edf1f5;
+            border-radius: 16px;
+            padding: 25px 30px;
+            max-width: 650px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.02);
+        }
+
+        .task-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.08);
+            border-color: #cbd5e1;
+        }
+
+        .task-info h3 {
+            font-size: 16px;
+            font-weight: 600;
+            color: #334155;
+            margin-bottom: 6px;
+        }
+
+        .task-info p {
+            font-size: 13px;
+            color: #94a3b8;
+        }
+
+        .arrow {
+            width: 42px;
+            height: 42px;
+            border-radius: 50%;
+            background: #f1f5f9;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #64748b;
+            font-size: 20px;
+            transition: 0.3s;
+        }
+
+        .task-card:hover .arrow {
+            background: #334155;
+            color: white;
+        }
+
+        /* Responsif */
+        @media (max-width: 768px) {
+            .container {
+                flex-direction: column;
+            }
+
+            .sidebar {
+                width: 100%;
+                padding: 30px 25px;
+            }
+
+            .main-content {
+                padding: 45px 25px;
+            }
+
+            .welcome-text {
+                font-size: 32px;
+            }
+
+            .task-card {
+                padding: 20px;
+            }
+        }
+    </style>
 </head>
+
 <body>
 
-    <div class="profile-card">
-        <h1 class="profile-name">Fajar Ali Hamzah</h1>
-        
-        <div class="data-group">
-            <span class="data-label">NPM</span>
-            <span class="data-value">230411100106</span>
-        </div>
+    <div class="container">
 
-        <div class="data-group">
-            <span class="data-label">Email</span>
-            <span class="data-value">230411100106@student.trunojoyo.ac.id</span>
-        </div>
+        <!-- SIDEBAR -->
+        <aside class="sidebar">
+
+            <!-- Ganti foto.jpg dengan foto Anda -->
+            <img src="foto.png" alt="Foto Profil" class="profile-img">
+
+            <h2 class="profile-name">Fajar Ali Hamzah</h2>
+
+            <div class="profile-info">
+
+                <div class="info-item">
+                    <div class="info-label">NIM</div>
+                    <div class="info-value">230411100106</div>
+                </div>
+
+                <div class="info-item">
+                    <div class="info-label">Email</div>
+                    <div class="info-value">230411100106@student.trunojoyo.ac.id</div>
+                </div>
+
+            </div>
+
+        </aside>
+
+        <!-- KONTEN UTAMA -->
+        <main class="main-content">
+
+            <h1 class="welcome-text">
+                Halo, <span>selamat datang.</span>
+            </h1>
+
+            <p class="subtitle">
+                Selamat datang di halaman tugas dan project saya.
+            </p>
+
+            <!-- Hyperlink menuju halaman tugas 1 -->
+            <a href="tugas1.html" class="task-card">
+
+                <div class="task-info">
+                    <h3>Tugas 1 — Crawling Berita</h3>
+                    <p>Pengumpulan dan pengolahan data berita</p>
+                </div>
+
+                <div class="arrow">
+                    →
+                </div>
+
+            </a>
+
+        </main>
+
     </div>
 
 </body>
